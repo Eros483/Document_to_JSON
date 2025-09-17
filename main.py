@@ -139,7 +139,7 @@ class PDFParser:
         Utilises camelot as a fallback for extracting tables.
         """
         try:
-            tables=camelot.read_pdf(str(self.pdf_path), pages='all', flavour='lattice')
+            tables=camelot.read_pdf(str(self.pdf_path), pages='all')
 
             for i, table in enumerate(tables):
                 df=table.df
